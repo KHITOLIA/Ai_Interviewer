@@ -1,6 +1,3 @@
-Cool, I checked out your GitHub repo. I can suggest specific changes to your **README.md** to match your project’s updated flow (voice once per question, speech-to-text, submission, summary), plus make it more polished. Here’s an updated version you can replace in your repo or merge:
-
----
 
 ```markdown
 # 🧠 AI Interviewer – Excel Edition
