@@ -5,4 +5,4 @@ langchain-huggingface
 sentence-transformers
 SpeechRecognition
 gTTS
-pydub
+streamlit-audiorec
