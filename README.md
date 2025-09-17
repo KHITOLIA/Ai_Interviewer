@@ -1,78 +1,76 @@
-Perfect ✅ Ek **README.md** bana dete hain jo professional lagega aur aapke project ko explain karega basic se leke deployment tak.
+Cool, I checked out your GitHub repo. I can suggest specific changes to your **README.md** to match your project’s updated flow (voice once per question, speech-to-text, submission, summary), plus make it more polished. Here’s an updated version you can replace in your repo or merge:
 
 ---
 
-# 📊 Excel AI Interviewer
+```markdown
+# 🧠 AI Interviewer – Excel Edition
 
-An **AI-powered Excel Interviewer** built using **Streamlit + LangChain + HuggingFace embeddings**.
-This project simulates an interactive Excel interview where:
-
-* The interviewer **asks questions via voice** 🗣️
-* The candidate **responds through speech** 🎤
-* AI evaluates the answer using **semantic similarity** (cosine similarity on embeddings).
-* Candidate gets **positive/negative feedback** in real time.
-* At the end, a **summary of weak topics** is provided.
+An AI-powered Excel Interviewer built using Streamlit + HuggingFace Embeddings.  
+You will be asked Excel-related questions via voice; you respond via speech; the system evaluates your answer through similarity matching and gives feedback, then finally a summary of topics you could improve.
 
 ---
 
-## 🚀 Features
+## 🎯 Features
 
-* 🎙️ **Voice-based interview**: Questions asked via text-to-speech.
-* 📝 **Speech-to-text answers**: Candidate replies through microphone.
-* 🤖 **AI evaluation**: Semantic similarity check between candidate’s answer and expected answer.
-* 💬 **Real-time feedback**: Positive/negative interviewer-style responses.
-* 📌 **Summary at the end**: Topics needing improvement are highlighted.
-* 🌐 **Deployable on Streamlit Cloud** (publicly shareable).
+- The interviewer speaks the question **once**, then waits for your response.  
+- Your answer is captured via browser mic, transcribed to text.  
+- AI compares your answer with the expected one using embeddings + cosine similarity.  
+- You receive interviewer-style feedback (positive or constructive) based on how close you were.  
+- After all questions, a summary of topics needing improvement is shown.  
 
 ---
 
-## 🛠️ Tech Stack
+## 🔧 Tech Stack
 
-* [Streamlit](https://streamlit.io/) – Interactive UI
-* [LangChain](https://www.langchain.com/) – Embedding management
-* [HuggingFace Transformers](https://huggingface.co/) – Sentence embeddings
-* [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) – Speech-to-text
-* [gTTS](https://pypi.org/project/gTTS/) – Text-to-speech
-* [scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html) – Cosine similarity
+| Purpose               | Library / Tool                                    |
+|------------------------|---------------------------------------------------|
+| Web framework          | Streamlit                                         |
+| Embeddings            | `sentence-transformers (all-mpnet-base-v2)` via HuggingFace |
+| Embedding integration  | LangChain                                       |
+| Speech-to-text         | `speech_recognition` (browser mic + Google STT)   |
+| Text-to-speech         | `gTTS`                                            |
+| Similarity metric      | Cosine similarity (from scikit-learn)             |
 
 ---
 
 ## 📂 Project Structure
 
 ```
-excel_ai_interviewer/
-│
-├── app.py                 # Main Streamlit application
-├── requirements.txt       # Project dependencies
-└── README.md              # Documentation (this file)
-```
+
+Ai\_Interviewer/
+├── app.py               # Main application logic (question ask, speech capture & processing)
+├── requirements.txt     # Dependencies for easy install
+└── README.md            # This file
+
+````
 
 ---
 
-## ⚙️ Installation (Run Locally)
+## ⚙️ Installation (Local)
 
-1. **Clone the repository**
-
+1. Clone your repository  
    ```bash
-   git clone https://github.com/your-username/excel-ai-interviewer.git
-   cd excel-ai-interviewer
-   ```
+   git clone https://github.com/KHITOLIA/Ai_Interviewer.git
+   cd Ai_Interviewer
+````
 
-2. **Create virtual environment (recommended)**
+2. (Optional but recommended) Create and activate a virtual environment
 
    ```bash
    python -m venv venv
-   source venv/bin/activate   # (Linux/Mac)
-   venv\Scripts\activate      # (Windows)
+   # On Windows
+   venv\Scripts\activate
+   # On macOS / Linux
+   source venv/bin/activate
    ```
 
-3. **Install dependencies**
+3. Install dependencies
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Run the app**
+4. Run the app
 
    ```bash
    streamlit run app.py
@@ -80,58 +78,61 @@ excel_ai_interviewer/
 
 ---
 
-## 🎤 Usage
+## 🗣️ Usage Workflow
 
-1. Start the app → It will **speak the first Excel question**.
-2. Answer verbally (mic required).
-3. AI will **transcribe your answer, compare, and give feedback**.
-4. Continue until all questions are answered.
-5. At the end, you will see a **summary of weak areas**.
+1. When you open the app, the interviewer will **speak the first question** out loud (once).
+2. When ready, click the mic/record button and speak your answer.
+3. Submit the answer. The app will transcribe your speech, compute similarity with the expected answer, and provide feedback.
+4. The same process repeats for subsequent questions.
+5. At the end, you’ll see a **summary of topics** that your answers were weaker on.
 
 ---
 
 ## ☁️ Deployment (Streamlit Cloud)
 
-1. Push your code to a **GitHub repo**.
-
-   ```
-   app.py
-   requirements.txt
-   README.md
-   ```
-
-2. Go to [Streamlit Cloud](https://share.streamlit.io) → **New app**.
-
-3. Select:
-
-   * Repo: `your-username/excel-ai-interviewer`
-   * Branch: `main` (or whichever branch you uploaded to)
-   * File: `app.py`
-
-4. Click **Deploy** 🚀
-
-5. After a few minutes, your app will be live at:
-
-   ```
-   https://your-username-excel-ai-interviewer.streamlit.app
-   ```
+1. Ensure your code is pushed to GitHub (your latest version with voice-once, speech-to-text + summary).
+2. Ensure `requirements.txt` is updated with all required libraries.
+3. Go to [Streamlit Community Cloud](https://share.streamlit.io), login with your GitHub.
+4. Create a **New app** → Select your repository `KHITOLIA/Ai_Interviewer`, main branch, `app.py` as the entry point.
+5. Click **Deploy**. Wait a few minutes.
+6. Once live, you'll get a URL like `https://<your-username>-ai-interviewer.streamlit.app`. Share it or use it.
 
 ---
 
-## 🔮 Future Enhancements
+## 📝 Example `requirements.txt`
 
-* Add more Excel-related questions dynamically from a database.
-* Support for **multi-language interviews**.
-* Add **leaderboard** for multiple candidates.
-* Integration with **OpenAI / Mistral LLMs** for more flexible evaluation.
+Here is an example of what yours should have (based on your code):
+
+```
+streamlit
+numpy
+scikit-learn
+langchain-huggingface
+sentence-transformers
+SpeechRecognition
+gTTS
+st_audiorec
+```
+
+> Note: If you’re using a widget that directly gives you WAV bytes (like `st_audiorec`) then you may not need libraries like `pydub` or `ffmpeg` if you avoid them.
 
 ---
 
-## 👨‍💻 Author
+## 🔍 Future Improvements
 
-**Your Name**
-🔗 GitHub: [your-username](https://github.com/your-username)
+* Add more Excel questions/dynamic question bank.
+* Better error handling when speech is not clear or user didn’t speak.
+* Live transcription display during speech (speech-as-you-speak).
+* Responsiveness / mobile compatibility.
+* Support for more languages or accents.
 
 ---
 
-👉 Do you also want me to make a **sample GitHub repo structure (with app.py + requirements.txt + README.md)** ready-to-upload for you?
+## 👤 Author
+
+**KHITOLIA**
+GitHub: [KHITOLIA](https://github.com/KHITOLIA)
+
+---
+
+Feel free to copy this into your README.md in the repo. If you want, I can also send a PR draft for your repo with this README so you just review & merge.
