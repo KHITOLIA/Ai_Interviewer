@@ -110,9 +110,7 @@ excel_ai_interviewer/
 4. Click **Deploy** 🚀
 
 5. After a few minutes, your app will be live at:
-
-   ```
-https://ai-intervieweer.streamlit.app/
+   https://ai-intervieweer.streamlit.app/
    ```
 
 ---
