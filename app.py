@@ -14,13 +14,6 @@ import time
 from datetime import datetime
 
 
-# Hello, my name is Tushar Khitoliya, and I am an AI-ML Engineer. I completed my B.Tech in Electrical and Electronics Engineering from the National Institute of Technology, Delhi.
-
-# I have strong expertise in Python, machine learning, deep learning, NLP, and Generative AI tools like HuggingFace and LangChain vector databases and RAG frameworks . I have worked on projects including a Music Genre Classifier, Plant Disease Diagnosis system, and a medical chatbot using Retrieval-Augmented Generation.
-
-# Professionally, I have trained corporate teams on AI and ML at Blogic Software Technology and mentored students at Coding Blocks and served as an AI-ML trainer in Chitkara University, Punjab . 
-
-# I am passionate about building AI-driven solutions, solving real-world problems, and continuously learning. I would love to contribute my skills and grow with your organization. Thank you for your time.
 
 
 
